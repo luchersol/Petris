@@ -1,0 +1,102 @@
+<diagram program="umletino" version="15.1"><zoom_level>12</zoom_level><help_text>MatchInvitation
+--
+isAccepted: boolean </help_text><element><id>UMLClass</id><coordinates><x>876</x><y>408</y><w>120</w><h>36</h></coordinates><panel_attributes>Admin
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>408</y><w>252</w><h>72</h></coordinates><panel_attributes>Player
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>636</x><y>84</y><w>180</w><h>60</h></coordinates><panel_attributes>*NamedEntity*
+--
+name: String {NotBlank}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>624</x><y>612</y><w>408</w><h>156</h></coordinates><panel_attributes>Match
+--
+startDate: DateTime
+endDate: DateTime
+code: String
+numTurn: Integer {NotNull, Min(1)}
+contaminationLevelBlue: Integer {NotNull, Min(0), Max(8)}
+contaminationLevelRed: Integer {NotNull, Min(0), Max(8)}
+isPrivate: Boolean {NotNull}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>84</x><y>384</y><w>348</w><h>156</h></coordinates><panel_attributes>Stats
+--
+totalBacterium: Integer {NotNull, PositiveOrZero}
+totalSarcinas: Integer {NotNull, PositiveOrZero}
+victories: Integer {NotNull, PositiveOrZero}
+losses: Integer {NotNull, PositiveOrZero}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>24</x><y>288</y><w>156</w><h>60</h></coordinates><panel_attributes>MatchInvitation
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>216</x><y>552</y><w>360</w><h>72</h></coordinates><panel_attributes>Comments
+--
+message: String {NotBlank}
+commentDate: DateTime {NotNull, PastOrPresent}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>564</x><y>192</y><w>144</w><h>60</h></coordinates><panel_attributes>FriendRequest
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1236</x><y>408</y><w>288</w><h>108</h></coordinates><panel_attributes>Achievement
+--
+badgeImage: String
+description: String {NotBlank}
+meter: Meter
+numCondition: Integer {min(1), NotNull}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1056</x><y>612</y><w>132</w><h>108</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+Meter
+--
+MATCH
+VICTORY
+DEFEAT</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>936</x><y>516</y><w>276</w><h>60</h></coordinates><panel_attributes>AchievementPlayer
+--
+achievementDate: DateTime {NotNull}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>612</x><y>864</y><w>360</w><h>96</h></coordinates><panel_attributes>PetriDish
+--
+index: Integer {NotNull, Min(0), Max(6)}
+chipsPlayerBlue: Integer {NotNull, Min(0), Max(5)}
+chipsPlayerRed: Integer {NotNull, Min(0), Max(5)}</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>756</y><w>120</w><h>132</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=7
+belongs to v
+</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>408</y><w>204</w><h>48</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>288</y><w>504</w><h>144</h></coordinates><panel_attributes>lt=-&gt;
+m1=*
+m2=1
+sent by</panel_attributes><additional_attributes>10;20;390;20;390;100</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>312</y><w>480</w><h>120</h></coordinates><panel_attributes>lt=-&gt;
+m1=*
+m2=1
+sent to</panel_attributes><additional_attributes>10;20;370;20;370;80</additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>612</y><w>216</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=*</panel_attributes><additional_attributes>160;70;10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>432</y><w>192</w><h>144</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=*</panel_attributes><additional_attributes>140;10;10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>624</x><y>468</y><w>84</w><h>168</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=*
+played</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>744</x><y>468</y><w>72</w><h>168</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=*
+create</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>684</x><y>468</y><w>60</w><h>168</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=*
+win
+</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>984</x><y>396</y><w>276</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+m1=*
+m2=1
+create</panel_attributes><additional_attributes>210;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1056</x><y>444</y><w>48</w><h>96</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>20;60;19;12</additional_attributes></element><element><id>Relation</id><coordinates><x>636</x><y>288</y><w>84</w><h>144</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=*
+be friends</panel_attributes><additional_attributes>20;100;20;20;40;20;40;100</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>432</y><w>420</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+m2=*
+have</panel_attributes><additional_attributes>330;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>132</y><w>636</w><h>300</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;510;40;510;230</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>132</y><w>756</w><h>636</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>610;10;610;40;10;40;10;510;520;510</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>288</y><w>108</w><h>144</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=*
+send request</panel_attributes><additional_attributes>20;100;20;20;60;20;60;100</additional_attributes></element><element><id>Relation</id><coordinates><x>672</x><y>240</y><w>96</w><h>144</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;59;92</additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>204</y><w>312</w><h>96</h></coordinates><panel_attributes>User
+--
+username: String {Unique, NotBlank}
+password: Stromg {NotBlank, Length(min(8))}
+online: Boolena {NotNull}
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>948</x><y>288</y><w>48</w><h>144</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1188</x><y>252</y><w>132</w><h>48</h></coordinates><panel_attributes>Authority
+--
+authority: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1116</x><y>192</y><w>168</w><h>84</h></coordinates><panel_attributes>lt=-&gt;
+m1=*
+m2=1
+</panel_attributes><additional_attributes>10;20;110;20;110;50</additional_attributes></element><element><id>Relation</id><coordinates><x>828</x><y>288</y><w>48</w><h>144</h></coordinates><panel_attributes>lt=-&gt;
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>48</x><y>336</y><w>600</w><h>420</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=*</panel_attributes><additional_attributes>480;320;10;320;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>252</x><y>192</y><w>156</w><h>60</h></coordinates><panel_attributes>MatchInvitation
+--
+isAccepted: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>84</x><y>240</y><w>264</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>200;10;200;30;10;30;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>312</x><y>240</y><w>336</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30;260;30;260;10</additional_attributes></element></diagram>

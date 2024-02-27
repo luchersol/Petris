@@ -1,0 +1,88 @@
+.home-page-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../images/menuBackground.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.initial-page-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../images/FondoRosita.jpeg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.initial-page-container-admin{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../images/fondoNaranjita.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-page-container-logged{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../images/menuBackground.png');
+    background-size: cover;
+    position: absolute;
+    align-self: center;
+    align-items:center;
+    z-index: -1;
+    display: flex;
+}
+
+.hero-div{
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-div h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2f324f;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero-div h3{
+    text-align: center;
+}
+
+.circleButton{
+    background-size: 'cover';
+    color: 'white';
+    height: 290;
+    width: 300;
+    border: 'transparent';
+    cursor: 'PointerEvent';
+    margin-bottom: 200;
+    transition: 'transform 0.2s, filter 0.2s';
+    padding-top: 100px;
+}
